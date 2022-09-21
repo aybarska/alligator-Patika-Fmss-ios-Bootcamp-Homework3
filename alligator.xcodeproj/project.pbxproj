@@ -52,6 +52,8 @@
 		03190EB428D9EB720006A517 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				03190EC328D9FBD00006A517 /* PostsTableViewCell.xib */,
+				03190EC228D9FBD00006A517 /* PostsTableViewCell.swift */,
 				03A5624428D8F6FF005CE7CA /* PostsViewController.swift */,
 			);
 			path = View;
@@ -77,7 +79,10 @@
 		03190EBD28D9F9360006A517 /* app */ = {
 			isa = PBXGroup;
 			children = (
-				03A5625128D8F704005CE7CA /* Info.plist */,
+				03A5624628D8F6FF005CE7CA /* Main.storyboard */,
+				03A5624E28D8F704005CE7CA /* LaunchScreen.storyboard */,
+				03A5624928D8F6FF005CE7CA /* alligator.xcdatamodeld */,
+				03A5624C28D8F704005CE7CA /* Assets.xcassets */,
 				03A5624028D8F6FF005CE7CA /* AppDelegate.swift */,
 				03A5624228D8F6FF005CE7CA /* SceneDelegate.swift */,
 			);
@@ -103,18 +108,21 @@
 		03A5623F28D8F6FF005CE7CA /* alligator */ = {
 			isa = PBXGroup;
 			children = (
-				03A5624C28D8F704005CE7CA /* Assets.xcassets */,
+				03A5625128D8F704005CE7CA /* Info.plist */,
+				03FAB3A028DAFE2D003B04AB /* PostsPage */,
 				03190EBD28D9F9360006A517 /* app */,
-				03190EB828D9EEA30006A517 /* Model */,
-				03190EB528D9ED040006A517 /* VM */,
-				03190EB428D9EB720006A517 /* View */,
-				03A5624628D8F6FF005CE7CA /* Main.storyboard */,
-				03A5624E28D8F704005CE7CA /* LaunchScreen.storyboard */,
-				03A5624928D8F6FF005CE7CA /* alligator.xcdatamodeld */,
-				03190EC228D9FBD00006A517 /* PostsTableViewCell.swift */,
-				03190EC328D9FBD00006A517 /* PostsTableViewCell.xib */,
 			);
 			path = alligator;
+			sourceTree = "<group>";
+		};
+		03FAB3A028DAFE2D003B04AB /* PostsPage */ = {
+			isa = PBXGroup;
+			children = (
+				03190EB828D9EEA30006A517 /* Model */,
+				03190EB428D9EB720006A517 /* View */,
+				03190EB528D9ED040006A517 /* VM */,
+			);
+			path = PostsPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

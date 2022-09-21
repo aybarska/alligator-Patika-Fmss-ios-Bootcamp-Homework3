@@ -30,7 +30,8 @@ class PostsViewModel {
     
     func didClickItem(at index: Int) {
         let selectedItem = model.posts[index]
-        //navigate ? 
+        //navigate ?
+        print(selectedItem)
     }
     
     
@@ -39,7 +40,7 @@ class PostsViewModel {
 private extension PostsViewModel {
     @discardableResult
     func makeViewBasedModel(_ posts: [Post]) -> [PostCellViewModel] { //make data usabe for view
-        return []
+        return posts.map { .init(title: $0.title, description: $0.body) }
     }
 }
 
@@ -49,10 +50,10 @@ extension PostsViewModel: PostsModelProtocol {
         if isSuccess {
             let posts = model.posts
             let items = makeViewBasedModel(posts)
-            
             viewDelegate?.didCellItemFetch(items)
-        }else {
-            
+            viewDelegate?.hideEmptyView()
+        } else {
+            viewDelegate?.showEmptyView()
         }
 
     }
