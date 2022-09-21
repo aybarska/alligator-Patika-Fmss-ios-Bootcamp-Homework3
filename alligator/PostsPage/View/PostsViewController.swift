@@ -39,10 +39,20 @@ private extension PostsViewController {
 }
 
 extension PostsViewController: PostsViewModelViewProtocol {
+    
     func didCellItemFetch(_ items: [PostCellViewModel]) {
         self.items = items
         tableView.reloadData()
     }
+    
+    func showEmptyView() {
+        //todo
+    }
+    
+    func hideEmptyView() {
+        //todo
+    }
+    
 }
 
 extension PostsViewController: UITableViewDelegate {

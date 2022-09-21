@@ -8,14 +8,16 @@
 import Foundation
 
 protocol PostsModelProtocol:AnyObject {
-    func didDataFetch()
+    func didDataFetchProcessFinish(_ isSuccess: Bool)
 }
 
 class PostsModel {
     weak var delegate: PostsModelProtocol?
+    var posts: [Post] = []
     
     func fetchData() {
-        delegate?.didDataFetch()
+        
+        delegate?.didDataFetchProcessFinish(true)
     }
     
 }
