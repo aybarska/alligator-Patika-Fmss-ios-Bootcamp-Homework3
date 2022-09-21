@@ -28,7 +28,8 @@ class PostsModel {
         
            let task = URLSession.shared.dataTask(with: request) {[weak self] data, response, error in
            
-            guard let _ = error else {
+            guard error == nil
+               else {
                 self?.delegate?.didDataFetchProcessFinish(false)
                 return
             }

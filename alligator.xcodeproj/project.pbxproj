@@ -81,8 +81,6 @@
 			children = (
 				03A5624628D8F6FF005CE7CA /* Main.storyboard */,
 				03A5624E28D8F704005CE7CA /* LaunchScreen.storyboard */,
-				03A5624928D8F6FF005CE7CA /* alligator.xcdatamodeld */,
-				03A5624C28D8F704005CE7CA /* Assets.xcassets */,
 				03A5624028D8F6FF005CE7CA /* AppDelegate.swift */,
 				03A5624228D8F6FF005CE7CA /* SceneDelegate.swift */,
 			);
@@ -108,6 +106,8 @@
 		03A5623F28D8F6FF005CE7CA /* alligator */ = {
 			isa = PBXGroup;
 			children = (
+				03A5624C28D8F704005CE7CA /* Assets.xcassets */,
+				03A5624928D8F6FF005CE7CA /* alligator.xcdatamodeld */,
 				03A5625128D8F704005CE7CA /* Info.plist */,
 				03FAB3A028DAFE2D003B04AB /* PostsPage */,
 				03190EBD28D9F9360006A517 /* app */,

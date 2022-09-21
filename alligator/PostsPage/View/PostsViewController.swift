@@ -30,6 +30,8 @@ private extension PostsViewController {
     func makeUI() {
         tableView.delegate = self
         tableView.dataSource = self
+        //tableView.backgroundView = UIImageView(image: UIImage(named: "postsBg"))
+
         registerCell()
     }
     
@@ -42,7 +44,9 @@ extension PostsViewController: PostsViewModelViewProtocol {
     
     func didCellItemFetch(_ items: [PostCellViewModel]) {
         self.items = items
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
     
     func showEmptyView() {
