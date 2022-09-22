@@ -10,6 +10,7 @@ import UIKit
 class PostsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    
     private let viewModel = PostsViewModel()
     
     private var items: [PostCellViewModel] = []

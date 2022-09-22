@@ -44,14 +44,36 @@
         <!--Photos-->
         <scene sceneID="pMR-GJ-S1o">
             <objects>
-                <viewController id="fbo-1H-rKU" sceneMemberID="viewController">
+                <viewController id="fbo-1H-rKU" customClass="PhotosViewController" customModule="alligator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mA2-W7-cFY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eUi-9G-zU3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="oew-95-6AJ">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Vm2-eJ-43K"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vm2-eJ-43K" firstAttribute="trailing" secondItem="eUi-9G-zU3" secondAttribute="trailing" id="Iqx-jm-dim"/>
+                            <constraint firstItem="Vm2-eJ-43K" firstAttribute="bottom" secondItem="eUi-9G-zU3" secondAttribute="bottom" id="QiZ-Wm-BQE"/>
+                            <constraint firstItem="eUi-9G-zU3" firstAttribute="top" secondItem="Vm2-eJ-43K" secondAttribute="top" id="XkA-Sf-Qyq"/>
+                            <constraint firstItem="eUi-9G-zU3" firstAttribute="leading" secondItem="Vm2-eJ-43K" secondAttribute="leading" id="c8y-6n-ZVq"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Photos" image="photo.on.rectangle.angled" catalog="system" id="GGi-l8-ZyK"/>
+                    <connections>
+                        <outlet property="collectionView" destination="eUi-9G-zU3" id="2kf-5e-hei"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F6p-2P-gA2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,9 +126,6 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
