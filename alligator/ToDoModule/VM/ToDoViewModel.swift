@@ -10,24 +10,24 @@ import Foundation
 protocol ToDoViewModelViewProtocol:AnyObject {
    // func didCellItemFetch(_ items: [ToDoCellViewModel])
     
-    func showEmptyView()
-    func hideEmptyView()
+    func refreshView()
+    
 }
 
 
 class ToDoViewModel {
 //    private let model = ToDoModel()
 
-    weak var viewDelegate: ToDoViewModelViewProtocol?
+   weak var viewDelegate: ToDoViewModelViewProtocol?
     
    func didViewLoad() {
         //model.fetchData()
     }
     
     func didClickItem(at index: Int) {
-        //let selectedItem = model.posts[index]
+        let selectedItem = todoAtIndex(index)
         //navigate ?
-        //print(selectedItem)
+        print(selectedItem)
     }
     
     var todos = [ToDo]()

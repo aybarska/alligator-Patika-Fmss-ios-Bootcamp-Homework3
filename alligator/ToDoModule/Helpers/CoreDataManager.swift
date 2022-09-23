@@ -46,10 +46,8 @@ class CoreDataManager {
     
     func getAllTodos () -> [ToDo] {
         let request: NSFetchRequest<ToDo> = ToDo.fetchRequest()
-        let firstSort = NSSortDescriptor(key: #keyPath(ToDo.td_createdDate), ascending: true)
-        let secondSort = NSSortDescriptor(key: #keyPath(ToDo.td_isEvaluated), ascending: false)
-        let thirdSort = NSSortDescriptor(key: #keyPath(ToDo.td_title), ascending: true)
-        request.sortDescriptors = [firstSort, secondSort, thirdSort]
+        let firstSort = NSSortDescriptor(key: #keyPath(ToDo.td_createdDate), ascending: false)
+        request.sortDescriptors = [firstSort]
         var todos = [ToDo]()
         
         do {
@@ -73,12 +71,12 @@ class CoreDataManager {
     }
     
     
-    func updateToDo(todoItem: ToDo, td_title: String, td_description: String, completion: Bool){
+    func updateToDo(todoItem: ToDo, td_title: String, td_description: String, td_isEvaluated: Bool){
         let manageContext = persistentContainer.viewContext
         todoItem.td_title = td_title
         todoItem.td_description = td_description
-        todoItem.td_isEvaluated = completion
-        todoItem.td_createdDate = Date()
+        todoItem.td_isEvaluated = td_isEvaluated
+        //todoItem.td_createdDate = Date()
         
         do {
             if manageContext.hasChanges{

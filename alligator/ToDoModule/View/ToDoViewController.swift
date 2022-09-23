@@ -7,7 +7,12 @@
 
 import UIKit
 
-class ToDoViewController: UIViewController {
+class ToDoViewController: UIViewController, AddViewDelegate {
+    func reloadTable() {
+        viewModel.refreshData()
+        self.tableView.reloadData()
+    }
+    
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: UIButton!
@@ -21,18 +26,14 @@ class ToDoViewController: UIViewController {
     }
     
 
+    @IBAction func addToDoButton(_ sender: Any) {
+        let destinationVC = storyboard?.instantiateViewController(withIdentifier: "AddNewToDoViewController") as? AddNewToDoViewController
+                       destinationVC?.isAdding = true
+                       destinationVC?.delegate = self
+                       self.navigationController?.pushViewController(destinationVC!, animated: true)
+                       
+    }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "addToDoSegue"{
-        let destinationVC = segue.destination as! AddNewToDoViewController
-            if(selectedIndex != nil) {
-                destinationVC.isAdding = false
-                destinationVC.toDoObject = viewModel.todoAtIndex(selectedIndex!)
-            } else {
-                destinationVC.isAdding = true
-            }
-
-    }}
 }
 
 private extension ToDoViewController {
@@ -56,8 +57,13 @@ extension ToDoViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoTableViewCell") as! ToDoTableViewCell
-        
-        cell.titleLabel.text = viewModel.todoAtIndex(indexPath.row).td_title
+        let item = viewModel.todoAtIndex(indexPath.row)
+        cell.titleLabel.text = item.td_title
+        if(item.td_isEvaluated == true) {
+           cell.checkImage.image = UIImage(named: "checked")
+        } else {
+            cell.checkImage.image = UIImage(named: "unchecked")
+        }
         return cell
     }
     
@@ -65,7 +71,12 @@ extension ToDoViewController: UITableViewDelegate, UITableViewDataSource {
        //let todo = viewModel.todoAtIndex(indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
         selectedIndex = indexPath.row
-        performSegue(withIdentifier: "addToDoSegue", sender: nil)
+        //performSegue(withIdentifier: "addToDoSegue", sender: tableView)
+        let destinationVC = storyboard?.instantiateViewController(withIdentifier: "AddNewToDoViewController") as? AddNewToDoViewController
+                       destinationVC?.isAdding = false
+                       destinationVC?.delegate = self
+                       destinationVC?.toDoObject = viewModel.todoAtIndex(selectedIndex!)
+                       self.navigationController?.pushViewController(destinationVC!, animated: true)
         
     }
     
@@ -78,6 +89,8 @@ extension ToDoViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
 }
+
+
 
 extension ToDoViewController: UIAdaptivePresentationControllerDelegate {
   

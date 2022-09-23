@@ -28,8 +28,12 @@ class AddNewToDoViewModel {
   }
     
     func uptadeTask(v:ToDo) {
-        CoreDataManager.shared.updateToDo(todoItem: v, td_title: self.td_title, td_description: self.td_description, completion: self.td_isEvaluated)
-    
+        CoreDataManager.shared.updateToDo(todoItem: v, td_title: self.td_title, td_description: self.td_description, td_isEvaluated: self.td_isEvaluated)
+       
   }
 
 }
+
+
+
+
