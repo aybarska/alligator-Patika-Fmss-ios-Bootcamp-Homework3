@@ -79,11 +79,11 @@ extension PhotosViewController: UICollectionViewDataSource {
 extension PhotosViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let leftAndRightPaddings: CGFloat = 22.0 // things gets messy below that number
+        let leftAndRightPaddings: CGFloat = 20.0 // things gets messy below that number
         let numberOfItemsPerRow: CGFloat = 3.0
     
         let width = (collectionView.frame.width-leftAndRightPaddings)/numberOfItemsPerRow
-        return CGSize(width: width, height: width + 50)
+        return CGSize(width: width, height: width + 40)
 
     }
 

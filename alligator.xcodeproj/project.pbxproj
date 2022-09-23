@@ -12,6 +12,8 @@
 		03190EBC28D9F6110006A517 /* PostsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03190EBB28D9F6110006A517 /* PostsEntity.swift */; };
 		03190EC428D9FBD00006A517 /* PostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03190EC228D9FBD00006A517 /* PostsTableViewCell.swift */; };
 		03190EC528D9FBD00006A517 /* PostsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03190EC328D9FBD00006A517 /* PostsTableViewCell.xib */; };
+		0328AA6C28DDCFF1003B3A96 /* AddNewToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AA6B28DDCFF1003B3A96 /* AddNewToDoViewController.swift */; };
+		0328AA6E28DDD262003B3A96 /* AddNewToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328AA6D28DDD262003B3A96 /* AddNewToDoViewModel.swift */; };
 		0370408F28DB460B001772C2 /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370408E28DB460B001772C2 /* PhotosViewController.swift */; };
 		0370409528DB4871001772C2 /* PhotosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370409428DB4871001772C2 /* PhotosViewModel.swift */; };
 		0370409728DB493B001772C2 /* PhotosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0370409628DB493B001772C2 /* PhotosModel.swift */; };
@@ -25,6 +27,12 @@
 		03A5624B28D8F6FF005CE7CA /* alligator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 03A5624928D8F6FF005CE7CA /* alligator.xcdatamodeld */; };
 		03A5624D28D8F704005CE7CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03A5624C28D8F704005CE7CA /* Assets.xcassets */; };
 		03A5625028D8F704005CE7CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03A5624E28D8F704005CE7CA /* LaunchScreen.storyboard */; };
+		03DB1E8A28DC88ED000764C5 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB1E8928DC88ED000764C5 /* ToDoViewController.swift */; };
+		03DB1E8C28DC8921000764C5 /* ToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB1E8B28DC8921000764C5 /* ToDoViewModel.swift */; };
+		03DB1E9628DCA337000764C5 /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB1E9528DCA337000764C5 /* ToDoModel.swift */; };
+		03DB1E9928DCA62E000764C5 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DB1E9828DCA62E000764C5 /* CoreDataManager.swift */; };
+		03DBC05428DDC2E800341974 /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DBC05228DDC2E800341974 /* ToDoTableViewCell.swift */; };
+		03DBC05528DDC2E800341974 /* ToDoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03DBC05328DDC2E800341974 /* ToDoTableViewCell.xib */; };
 		8FD2C778A182074ED3925E6C /* Pods_alligator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BE3CBCE70265E8A5533B61F /* Pods_alligator.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +42,8 @@
 		03190EBB28D9F6110006A517 /* PostsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsEntity.swift; sourceTree = "<group>"; };
 		03190EC228D9FBD00006A517 /* PostsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsTableViewCell.swift; sourceTree = "<group>"; };
 		03190EC328D9FBD00006A517 /* PostsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostsTableViewCell.xib; sourceTree = "<group>"; };
+		0328AA6B28DDCFF1003B3A96 /* AddNewToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToDoViewController.swift; sourceTree = "<group>"; };
+		0328AA6D28DDD262003B3A96 /* AddNewToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewToDoViewModel.swift; sourceTree = "<group>"; };
 		0370408E28DB460B001772C2 /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 		0370409428DB4871001772C2 /* PhotosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewModel.swift; sourceTree = "<group>"; };
 		0370409628DB493B001772C2 /* PhotosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosModel.swift; sourceTree = "<group>"; };
@@ -49,6 +59,12 @@
 		03A5624C28D8F704005CE7CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03A5624F28D8F704005CE7CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03A5625128D8F704005CE7CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03DB1E8928DC88ED000764C5 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		03DB1E8B28DC8921000764C5 /* ToDoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewModel.swift; sourceTree = "<group>"; };
+		03DB1E9528DCA337000764C5 /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
+		03DB1E9828DCA62E000764C5 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		03DBC05228DDC2E800341974 /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		03DBC05328DDC2E800341974 /* ToDoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoTableViewCell.xib; sourceTree = "<group>"; };
 		37D7774F565274E34D03B389 /* Pods-alligator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alligator.release.xcconfig"; path = "Target Support Files/Pods-alligator/Pods-alligator.release.xcconfig"; sourceTree = "<group>"; };
 		4BE3CBCE70265E8A5533B61F /* Pods_alligator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_alligator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D16AED9872912C98719C8F40 /* Pods-alligator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-alligator.debug.xcconfig"; path = "Target Support Files/Pods-alligator/Pods-alligator.debug.xcconfig"; sourceTree = "<group>"; };
@@ -178,6 +194,7 @@
 		03A5623F28D8F6FF005CE7CA /* alligator */ = {
 			isa = PBXGroup;
 			children = (
+				03DB1E8528DC85F0000764C5 /* ToDoModule */,
 				03FAB3A028DAFE2D003B04AB /* PostsModule */,
 				0370408928DB4563001772C2 /* PhotosModule */,
 				03A5624C28D8F704005CE7CA /* Assets.xcassets */,
@@ -186,6 +203,61 @@
 				03190EBD28D9F9360006A517 /* app */,
 			);
 			path = alligator;
+			sourceTree = "<group>";
+		};
+		03DB1E8528DC85F0000764C5 /* ToDoModule */ = {
+			isa = PBXGroup;
+			children = (
+				03DB1E9728DCA619000764C5 /* Helpers */,
+				03DB1E8628DC85FD000764C5 /* Model */,
+				03DB1E8728DC8605000764C5 /* View */,
+				03DB1E8828DC860A000764C5 /* VM */,
+			);
+			path = ToDoModule;
+			sourceTree = "<group>";
+		};
+		03DB1E8628DC85FD000764C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03DB1E9528DCA337000764C5 /* ToDoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03DB1E8728DC8605000764C5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				03DBC05128DDC2CD00341974 /* cell */,
+				03DB1E8928DC88ED000764C5 /* ToDoViewController.swift */,
+				0328AA6B28DDCFF1003B3A96 /* AddNewToDoViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03DB1E8828DC860A000764C5 /* VM */ = {
+			isa = PBXGroup;
+			children = (
+				03DB1E8B28DC8921000764C5 /* ToDoViewModel.swift */,
+				0328AA6D28DDD262003B3A96 /* AddNewToDoViewModel.swift */,
+			);
+			path = VM;
+			sourceTree = "<group>";
+		};
+		03DB1E9728DCA619000764C5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				03DB1E9828DCA62E000764C5 /* CoreDataManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		03DBC05128DDC2CD00341974 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				03DBC05228DDC2E800341974 /* ToDoTableViewCell.swift */,
+				03DBC05328DDC2E800341974 /* ToDoTableViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		03FAB3A028DAFE2D003B04AB /* PostsModule */ = {
@@ -276,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03A5625028D8F704005CE7CA /* LaunchScreen.storyboard in Resources */,
+				03DBC05528DDC2E800341974 /* ToDoTableViewCell.xib in Resources */,
 				0370409E28DB50CD001772C2 /* PhotosCollectionViewCell.xib in Resources */,
 				03A5624D28D8F704005CE7CA /* Assets.xcassets in Resources */,
 				03A5624828D8F6FF005CE7CA /* Main.storyboard in Resources */,
@@ -333,16 +406,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				0370408F28DB460B001772C2 /* PhotosViewController.swift in Sources */,
+				0328AA6E28DDD262003B3A96 /* AddNewToDoViewModel.swift in Sources */,
+				03DB1E9628DCA337000764C5 /* ToDoModel.swift in Sources */,
 				0370409728DB493B001772C2 /* PhotosModel.swift in Sources */,
 				03A5624528D8F6FF005CE7CA /* PostsViewController.swift in Sources */,
 				03190EB728D9ED460006A517 /* PostsViewModel.swift in Sources */,
 				0370409D28DB50CD001772C2 /* PhotosCollectionViewCell.swift in Sources */,
 				03A5624B28D8F6FF005CE7CA /* alligator.xcdatamodeld in Sources */,
+				03DB1E8A28DC88ED000764C5 /* ToDoViewController.swift in Sources */,
 				03A5624128D8F6FF005CE7CA /* AppDelegate.swift in Sources */,
+				03DB1E9928DCA62E000764C5 /* CoreDataManager.swift in Sources */,
 				03A5624328D8F6FF005CE7CA /* SceneDelegate.swift in Sources */,
 				0370409928DB49D6001772C2 /* PhotosEntity.swift in Sources */,
+				03DB1E8C28DC8921000764C5 /* ToDoViewModel.swift in Sources */,
 				03190EBA28D9EEB70006A517 /* PostsModel.swift in Sources */,
 				0370409528DB4871001772C2 /* PhotosViewModel.swift in Sources */,
+				0328AA6C28DDCFF1003B3A96 /* AddNewToDoViewController.swift in Sources */,
+				03DBC05428DDC2E800341974 /* ToDoTableViewCell.swift in Sources */,
 				03190EBC28D9F6110006A517 /* PostsEntity.swift in Sources */,
 				03190EC428D9FBD00006A517 /* PostsTableViewCell.swift in Sources */,
 			);
