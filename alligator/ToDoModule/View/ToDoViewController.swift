@@ -26,6 +26,10 @@ class ToDoViewController: UIViewController, AddViewDelegate {
     }
     
 
+    @IBAction func editTableButton(_ sender: Any) {
+        tableView.isEditing = !tableView.isEditing
+    }
+    
     @IBAction func addToDoButton(_ sender: Any) {
         let destinationVC = storyboard?.instantiateViewController(withIdentifier: "AddNewToDoViewController") as? AddNewToDoViewController
                        destinationVC?.isAdding = true
