@@ -17,7 +17,7 @@ class PostsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         //containerView.backgroundColor = .lightGray.withAlphaComponent(0.3)
-        containerView.backgroundColor = .blue.withAlphaComponent(0.3)
+        containerView.backgroundColor = .green.withAlphaComponent(0.3)
         containerView.layer.cornerRadius = 8
         
     }
