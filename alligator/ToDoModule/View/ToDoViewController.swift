@@ -86,9 +86,19 @@ extension ToDoViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            viewModel.deleteTask(indexPath.row) { (_) in
-                tableView.deleteRows(at: [indexPath], with: .automatic)
-            }
+            let alert = UIAlertController(title: "Careful", message: "Selected item will be deleted.", preferredStyle: UIAlertController.Style.alert)
+            
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
+                print("canceled")
+                 }))
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (_) in
+                self.viewModel.deleteTask(indexPath.row) { (_) in
+                    tableView.deleteRows(at: [indexPath], with: .automatic)
+                }
+                 }))
+            self.present(alert, animated: true, completion: nil)
+            
         }
     }
     
@@ -106,5 +116,7 @@ extension ToDoViewController: UIAdaptivePresentationControllerDelegate {
   }
   
 }
+
+
 
 

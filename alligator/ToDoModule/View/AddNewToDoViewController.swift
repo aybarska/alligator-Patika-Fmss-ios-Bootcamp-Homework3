@@ -52,6 +52,11 @@ class AddNewToDoViewController: UIViewController {
                _ = navigationController?.popViewController(animated: true)
                 self.delegate?.reloadTable()
         }
+        } else {
+            let alert = UIAlertController(title: "Warning", message: "To do title cannot be empty.", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .cancel, handler: { (_) in
+                 }))
+            self.present(alert, animated: true, completion: nil)
         }
     }
     /*
