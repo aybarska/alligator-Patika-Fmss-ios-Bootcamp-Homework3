@@ -51,11 +51,16 @@ extension PostsViewController: PostsViewModelViewProtocol {
     }
     
     func showEmptyView() {
-        //todo
+        
+        DispatchQueue.main.async {
+        let noDataImageView = UIImageView(image: UIImage(named: "noData1"))
+            noDataImageView.contentMode = .scaleAspectFit
+        self.tableView.backgroundView = noDataImageView
+        }
     }
     
     func hideEmptyView() {
-        //todo
+    
     }
     
 }
