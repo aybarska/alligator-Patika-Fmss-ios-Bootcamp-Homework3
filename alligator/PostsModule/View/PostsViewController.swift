@@ -22,17 +22,12 @@ class PostsViewController: UIViewController {
         viewModel.viewDelegate = self
         viewModel.didViewLoad()
     }
-    
-    
-
 }
 
 private extension PostsViewController {
     func makeUI() {
         tableView.delegate = self
         tableView.dataSource = self
-        //tableView.backgroundView = UIImageView(image: UIImage(named: "postsBg"))
-
         registerCell()
     }
     
@@ -51,9 +46,9 @@ extension PostsViewController: PostsViewModelViewProtocol {
     }
     
     func showEmptyView() {
-        
+        // has to be in main
         DispatchQueue.main.async {
-        let noDataImageView = UIImageView(image: UIImage(named: "noData1"))
+        let noDataImageView = UIImageView(image: UIImage(named: "noData2"))
             noDataImageView.contentMode = .scaleAspectFit
         self.tableView.backgroundView = noDataImageView
         }

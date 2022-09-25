@@ -9,7 +9,6 @@ import Foundation
 
 protocol PostsViewModelViewProtocol:AnyObject {
     func didCellItemFetch(_ items: [PostCellViewModel])
-    
     func showEmptyView()
     func hideEmptyView()
 }
@@ -30,7 +29,6 @@ class PostsViewModel {
     
     func didClickItem(at index: Int) {
         let selectedItem = model.posts[index]
-        //navigate ?
         print(selectedItem)
     }
     
@@ -39,7 +37,8 @@ class PostsViewModel {
 
 private extension PostsViewModel {
     @discardableResult
-    func makeViewBasedModel(_ posts: [Post]) -> [PostCellViewModel] { //make data usabe for view
+    func makeViewBasedModel(_ posts: [Post]) -> [PostCellViewModel] {
+        //make data usabe for view
         return posts.map { .init(title: $0.title, description: $0.body) }
     }
 }

@@ -15,8 +15,6 @@ class PostsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        //containerView.backgroundColor = .lightGray.withAlphaComponent(0.3)
         containerView.backgroundColor = .green.withAlphaComponent(0.3)
         containerView.layer.cornerRadius = 8
         

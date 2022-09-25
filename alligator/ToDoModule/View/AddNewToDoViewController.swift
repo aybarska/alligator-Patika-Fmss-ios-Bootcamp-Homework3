@@ -34,8 +34,6 @@ class AddNewToDoViewController: UIViewController {
                 isDoneSwitch.setOn(false, animated: true)
             }
         }
-        // Do any additional setup after loading the view.
-        
     }
     
 

@@ -30,7 +30,7 @@ class ToDoViewController: UIViewController, AddViewDelegate {
         tableView.isEditing = !tableView.isEditing
     }
     
-    @IBAction func addToDoButton(_ sender: Any) {
+    @IBAction func addToDoButton(_ sender: Any) { //isAdding variable is true
         let destinationVC = storyboard?.instantiateViewController(withIdentifier: "AddNewToDoViewController") as? AddNewToDoViewController
                        destinationVC?.isAdding = true
                        destinationVC?.delegate = self
@@ -72,10 +72,8 @@ extension ToDoViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       //let todo = viewModel.todoAtIndex(indexPath.row)
         tableView.deselectRow(at: indexPath, animated: true)
         selectedIndex = indexPath.row
-        //performSegue(withIdentifier: "addToDoSegue", sender: tableView)
         let destinationVC = storyboard?.instantiateViewController(withIdentifier: "AddNewToDoViewController") as? AddNewToDoViewController
                        destinationVC?.isAdding = false
                        destinationVC?.delegate = self
